@@ -103,9 +103,9 @@
           zoom: 13
         });
 
-        L.tileLayer('http://a.tile.stamen.com/toner/{z}/{x}/{y}.png', {
-          attribution: 'stamen http://maps.stamen.com/'
-        }).addTo(map);
+      L.tileLayer('https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-4xtxp73f/{z}/{x}/{y}.png', {
+        attribution: 'Mapbox <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+      }).addTo(map);
 
 
         // get the currently selected style
@@ -123,9 +123,6 @@
         });
       }
 
-//       L.tileLayer('https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-4xtxp73f/{z}/{x}/{y}.png', {
-//   attribution: 'Mapbox <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
-// }).addTo(map);
 
 
  
