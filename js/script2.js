@@ -113,7 +113,7 @@
         var layerUrl = 'https://nyu.carto.com/u/yuan/api/v2/viz/9f509a82-3d37-11e6-94fb-0ecfd53eb7d3/viz.json';
 
 
-        cartodb.createLayer(map, layerUrl)
+        cartodb.createLayer(map, layerUrl, { https: true })
         .addTo(map)
         .done(function(layers) {
           createSelector(layers);
