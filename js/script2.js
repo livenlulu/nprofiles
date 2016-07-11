@@ -102,10 +102,18 @@
           center: [40.712915,-73.954296],
           zoom: 13
         });
+
+        L.tileLayer('http://a.tile.stamen.com/toner/{z}/{x}/{y}.png', {
+          attribution: 'stamen http://maps.stamen.com/'
+        }).addTo(map);
+
+
         // get the currently selected style
         selectedStyle = $('li.selected').attr('id');
- 
-        cartodb.createLayer(map, 'https://nyu.carto.com/u/yuan/api/v2/viz/9f509a82-3d37-11e6-94fb-0ecfd53eb7d3/viz.json')
+        var layerUrl = 'https://nyu.carto.com/u/yuan/api/v2/viz/9f509a82-3d37-11e6-94fb-0ecfd53eb7d3/viz.json';
+
+
+        cartodb.createLayer(map, layerUrl)
         .addTo(map)
         .done(function(layers) {
           createSelector(layers);
@@ -114,5 +122,11 @@
           console.log(err);
         });
       }
+
+//       L.tileLayer('https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-4xtxp73f/{z}/{x}/{y}.png', {
+//   attribution: 'Mapbox <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+// }).addTo(map);
+
+
  
       window.onload = main;
