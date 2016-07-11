@@ -103,9 +103,11 @@
           zoom: 13
         });
 
-      L.tileLayer('https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-4xtxp73f/{z}/{x}/{y}.png', {
-        attribution: 'Mapbox <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+      L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+    att: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+
       }).addTo(map);
+
 
 
         // get the currently selected style
