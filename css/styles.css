@@ -81,3 +81,17 @@ html, body {
         position: relative;
         height: 100%;
       }
+
+      .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+        border-radius: 0px;
+      }
+
+      .nav-tabs>li>a {
+        border-radius: 0px;
+      }
+
+      .nav-tabs {
+        width: 100%;
+      }
+
+
