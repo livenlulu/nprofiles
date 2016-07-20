@@ -5,24 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Neighborhood Profiles</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css" rel="stylesheet" integrity="sha384-2mX2PSpkRSXLQzmNzH3gwK6srb06+OfbDlYjbog8LQuALYJjuQ3+Yzy2JIWNV9rW" crossorigin="anonymous">
+
+            <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
     
     <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
     
     <link rel="stylesheet" href="css/cartodb.css" />
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
  <!--    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
      -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:700, 400' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/d3.css" />
+
   </head>
   <body>
-    <div class="container" style="margin-left: 0px; margin-right:0px; width:100%">
+
+     <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> -->
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+          <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp;Neighborhood Profiles, NYC</a>
+
+
+
+        </div>
+      
+
+
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://livenlulu.github.io/nycp/"target="_blank"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Matrix</a></li>
+            <li>
+              <a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;ABOUT</a>
+            </li>
+
+          </ul>
+          </div>
+      
+    </nav>
+
+
+
+
+<!--     <div class="container" style="margin-left: 0px; margin-right:0px; width:100%">
         <div class="row">
         <div class="col-xs-4 col-md-3">
           <center><img src="data/np3.png" style="width:270px;"></img><br>
           <h2><i>Exploring neighborhood conditions in New York City</i></h2></center><br>
 
-          <div>
+                  <form>
+                    <label><input type="radio" name="mode" value="grouped"> Grouped</label>
+                    <label><input type="radio" name="mode" value="stacked" checked> Stacked</label>
+                  </form>
+ -->
+
+         <!--  <div>
            <center>
             <ul class="nav nav-tabs" role="tablist">
               <li role="presentation" class="active"><a href="#pop" aria-controls="pop" role="tab" data-toggle="tab">Population</a></li>
@@ -31,16 +78,20 @@
             </ul>
 
             <div class="tab-content">
-              <div role="tabpanel" class="tab-pane fade in active" id="pop">2323r</div>
+              <div role="tabpanel" class="tab-pane fade in active" id="pop">2323r
+
+
+
+              </div>
               <div role="tabpanel" class="tab-pane fade" id="age">werwrwerwer</div>
               <div role="tabpanel" class="tab-pane fade" id="income">2</div>
             </div>
           </center>
           </div>
-
+ -->
 
         </div>
-        <div class="col-xs-8 col-md-9" style="height:100%; padding:0px;">
+        <div class="col-xs-12" style="height:100%; padding:0px;">
           <div id="map"></div>
           <div id="layer_selector" class="cartodb-infobox">
               <ul>
@@ -54,11 +105,61 @@
         </div>
       </div>
     </div>
+
+
+
+
+
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" style="margin-top:50px">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">A Capstone Project by NYU CUSP, collabration with DCP</h4>
+            </div>
+            <div class="modal-body">
+              <h6>Planning the growth of the City of New York to enhance quality of life for all New Yorkers.</h6>
+              <ul class="nav nav-tabs nav-justified" id="aboutTabs">
+                
+               </ul>
+              <div class="tab-content" id="aboutTabsContent">
+                <div class="tab-pane fade active in" id="about">
+                  <!-- <h4> COMING SOON... </h4> -->
+                  
+
+                  
+                  </p>
+                  <div class="panel panel-danger">
+                    <div class="panel-heading"><b>Credits and Acknowledgments</b></div>
+                    <ul class="list-group">
+                      <li class="list-group-item"><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, <a href="http://www.highcharts.com/" target="_blank">Highcharts</a>, <a href="http://leafletjs.com/" target="_blank">Leaflet</a>, <a href="http://nvd3.org/index.html" target="_blank">NVD3</a>. </li>
+                      <li class="list-group-item">Data: NYC OpenData, Census</li>
+                      <li class="list-group-item">Contributors: 
+
+                    <a href="https://github.com/livenlulu" target="_blank">Lucy Kang</a>, <a href="https://github.com/ramdaffe" target="_blank">Ramda Yanurzha</a></li>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    
     <script src="js/script.js"></script>
     <script src="js/cartodb.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     
+    <script src="js/d3.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js" charset="utf-8"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+           <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!--     // <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script> -->
     
   </body>
