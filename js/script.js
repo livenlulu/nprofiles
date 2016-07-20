@@ -3,6 +3,16 @@
       function createSelector(layers) {
         var sql = new cartodb.SQL({ user: 'documentation' });
  
+
+  $("#about-btn").click(function() {
+  $("#aboutModal").modal("show");
+  $(".navbar-collapse.in").collapse("hide");
+  return false;
+    });
+
+
+
+
         var $options = $('#layer_selector li');
         $options.click(function(e) {
           // get the area of the selected layer
@@ -128,7 +138,7 @@
       window.onload = main;
 
 
-      $('#myTabs a').click(function (e) {
+      $('#age').click(function (e) {
         e.preventDefault()
         $(this).tab('show')
       })
